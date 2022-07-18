@@ -1,0 +1,9 @@
+version: '3'
+services:
+  emulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/home/pintos
+    working_dir: /home/pintos

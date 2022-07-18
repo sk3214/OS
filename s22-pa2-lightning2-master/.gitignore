@@ -1,0 +1,6 @@
+# **/src/examples/*.o
+**/src/examples/**/*.[o,a]
+
+**/.vscode
+**.tar
+**.gz

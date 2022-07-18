@@ -1,0 +1,21 @@
+{
+    "name": "emulator-container",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "runArgs": ["--name=emulator-container"],
+    "settings": {
+      "terminal.integrated.profiles.linux": {
+        "bash": {
+          "path": "/bin/bash"
+        }
+      },
+      "editor.tabSize": 4
+    },
+    "extensions": [
+      "bmewburn.vscode-intelephense-client",
+      "davidanson.vscode-markdownlint",
+      "ms-vscode.cpptools",
+      "ms-vscode.cpptools-extension-pack"
+    ]
+}

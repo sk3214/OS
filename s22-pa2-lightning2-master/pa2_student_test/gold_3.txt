@@ -1,0 +1,4 @@
+bfffffc0                          00 00 00 00 04 00 00 00 |        ........|
+bfffffd0  d4 ff ff bf eb ff ff bf-f0 ff ff bf f2 ff ff bf |................|
+bfffffe0  f8 ff ff bf 00 00 00 00-00 00 00 65 63 68 6f 00 |...........echo.|
+bffffff0  33 00 62 79 74 65 73 00-70 6c 65 61 73 65 21 00 |3.bytes.please!.|

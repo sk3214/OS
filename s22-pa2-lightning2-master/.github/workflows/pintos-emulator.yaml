@@ -1,0 +1,29 @@
+name: PintOS emulator runner
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [ 'master' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+
+      - name: Build docker image and test echo
+        run: cd ./docker && make echo
+      
+      - name: Clean artifacts of pintos
+        run: cd ./docker && make clean
+      
+      - name: Build userprog
+        run: cd ./docker && make build-userprog
+      
+      - name: Run phase 1 tests
+        run: cd ./docker && make phase1-tests
+      
+      - name: Run phase 2 tests
+        run: cd ./docker && make phase2-tests

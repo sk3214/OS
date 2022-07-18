@@ -1,0 +1,2 @@
+bfffffe0  00 00 00 00 02 00 00 00-ec ff ff bf f9 ff ff bf |................|
+bffffff0  fe ff ff bf 00 00 00 00-00 65 63 68 6f 00 31 00 |.........echo.1.|

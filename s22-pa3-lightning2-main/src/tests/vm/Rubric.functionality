@@ -1,0 +1,6 @@
+Functionality of virtual memory subsystem:
+- Test stack growth.
+3	pt-grow-stack
+3	pt-big-stk-obj
+3	pt-grow-pusha
+

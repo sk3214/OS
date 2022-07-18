@@ -1,0 +1,23 @@
+# -*- makefile -*-
+
+tests/vm_TESTS = $(addprefix tests/vm/,pt-grow-stack pt-grow-pusha	\
+pt-grow-bad pt-big-stk-obj pt-bad-addr pt-bad-read pt-write-code)
+
+tests/vm_PROGS = $(tests/vm_TESTS)
+
+tests/vm/pt-grow-stack_SRC = tests/vm/pt-grow-stack.c tests/arc4.c	\
+tests/cksum.c tests/lib.c tests/main.c
+tests/vm/pt-grow-pusha_SRC = tests/vm/pt-grow-pusha.c tests/lib.c	\
+tests/main.c
+tests/vm/pt-grow-bad_SRC = tests/vm/pt-grow-bad.c tests/lib.c tests/main.c
+tests/vm/pt-big-stk-obj_SRC = tests/vm/pt-big-stk-obj.c tests/arc4.c	\
+tests/cksum.c tests/lib.c tests/main.c
+tests/vm/pt-bad-addr_SRC = tests/vm/pt-bad-addr.c tests/lib.c tests/main.c
+tests/vm/pt-bad-read_SRC = tests/vm/pt-bad-read.c tests/lib.c tests/main.c
+tests/vm/pt-write-code_SRC = tests/vm/pt-write-code.c tests/lib.c tests/main.c
+tests/vm/pt-bad-read_PUTFILES = tests/vm/sample.txt
+tests/vm/zeros:
+	dd if=/dev/zero of=$@ bs=1024 count=6
+
+clean::
+	rm -f tests/vm/zeros

@@ -1,0 +1,4 @@
+# .devcontainer
+.vscode
+*.tar.gz
+*.zip
